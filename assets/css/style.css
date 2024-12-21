@@ -1,0 +1,6 @@
+body {background-color: green;}
+
+.alles{
+    display: grid;
+    grid-template-columns: repeat (autofit, minimax(80px, 1fr));
+}
