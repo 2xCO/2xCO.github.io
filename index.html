@@ -1,25 +1,27 @@
 ---
 layout: layout.html 
 ---
+
 {% for post in collections.post %}
 <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
 <p>{{ post.content }}</p>
 {% endfor %}
-hshshshshshshshshswh
-<!-- <div class="alles">
+
+<div class="alles">
     {% for post in collections.post | %}
     
         <div class="20eintrag">
     
             <p style="grid-row: span { post.data.duration };">
-                {{ post.content }}{{post.data.duration}} -->
-            <!-- </p>
+                {{ post.content }}{{post.data.duration}} 
+            </p>
             
         </div>
     
-    {% endfor %} -->
-<!-- </div> -->
-<!-- <div class="alles">
+    {% endfor %}
+</div>
+
+<div class="alles">
 
 {% for post in collections.post | %}
 
@@ -32,32 +34,3 @@ hshshshshshshshshswh
     </div>
 
 {% endfor %}
-
-{% for post in collections.post %}
-
-    <div class="30eintrag">
-
-        <h2>{{ post.content }}</h2>
-        <p>{{ post.data.30min }}</p>
-
-    </div>
-
-{% endfor %}
-
-{%- if tags == "20 min" %}
-
-<div class="20eintrag">
-
-    <h2>{{ post.content }}</h2>
-    <p>{{ post.data.20min }}</p>
-    
-
-</div>
-
-{%- endif -%}
-
-</div> -->
-
-<!-- {%- if tags == "toolsPages" %}
-<h1 class="cat--title">Free Tools For SEO and More!</h1>
-{%- endif -%} -->
