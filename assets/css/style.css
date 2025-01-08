@@ -6,11 +6,8 @@ body {background-color: oldlace};
     margin: 0;
 } */
 
-
-input[type="checkbox"]#{{ post.data.id }}:checked ~ .eintrag-{{ post.data.class }} {
-    width: 500dvw; 
-} 
-  
-input[type="checkbox"]#{{ post.data.id }}:checked ~ .eintrag-{{ post.data.class }} .box-content-{{ post.data.class }} {
-    opacity: 1; 
+.alles {
+    display: flex;
+    color: aqua;
 }
+
