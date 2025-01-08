@@ -11,3 +11,14 @@ body {background-color: oldlace};
     color: aqua;
 }
 
+.zeit {
+    color: black;
+}
+
+input[type="checkbox"]#{{ post.data.id }}:checked ~ .eintrag-{{ post.data.class }}{
+    width: 500vw; 
+} 
+  
+input[type="checkbox"]#{{ post.data.id }}:checked ~ .eintrag-{{ post.data.class }} .box-content-{{ post.data.class }}{
+    opacity: 1; 
+} 
