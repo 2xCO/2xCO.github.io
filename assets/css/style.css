@@ -1,24 +1,37 @@
-body {background-color: oldlace};
+body {
+    background-color: oldlace;
+}
+
+
+.alles {
+    display: flex;
+}  
+
+/* .zeit {
+    color: black;
+} */
+
+
+/* input[type="checkbox"]#toggle-box:checked + .box {
+    width: 500px; 
+}
+
+input[type="checkbox"]#toggle-box:checked + .box .box-content {
+    opacity: 1; 
+} */
+
+
+/* input[type="checkbox"] #{{ post.data.id }}:checked ~ .eintrag-{{ post.data.class }}{
+    width: 500vw; 
+} 
+  
+input[type="checkbox"] #{{ post.data.id }}:checked ~ .eintrag-{{ post.data.class }} .box-content-{{ post.data.class }}{
+    opacity: 1; 
+}   */
+
 
 /* ul {
     list-style-type: none; 
     padding: 0;
     margin: 0;
 } */
-
-.alles {
-    display: flex;
-    color: aqua;
-}
-
-.zeit {
-    color: black;
-}
-
-input[type="checkbox"]#{{ post.data.id }}:checked ~ .eintrag-{{ post.data.class }}{
-    width: 500vw; 
-} 
-  
-input[type="checkbox"]#{{ post.data.id }}:checked ~ .eintrag-{{ post.data.class }} .box-content-{{ post.data.class }}{
-    opacity: 1; 
-} 
