@@ -2,9 +2,12 @@ body {
     background-color: oldlace;
 }
 
-
+.time-box{
+    display: flex;
+}
 .alles {
     display: flex;
+    
 }  
 
 /* .zeit {
