@@ -43,17 +43,25 @@ summary::marker {
 }
 
 summary {
+    z-index:1;
     list-style-position: outside;
     margin-left: 30px;
     padding: 10px 10px 10px 20px;
     border-radius: 5px;
     border: solid green;
     list-style-type: '+ ';
+    position: relative;
+    top: calc(1em + 100px);
 }
 
 details[open] > summary {
     list-style-type: '- ';
     
+}
+
+.eintrag{
+    position: relative;
+    top: calc(-1.2em + 4px);
 }
 
 .nein-gestresst{
