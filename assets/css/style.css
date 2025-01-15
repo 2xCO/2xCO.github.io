@@ -8,8 +8,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
+
 .alles {
     width: 50vw;
     height: 50vh;
@@ -18,23 +18,17 @@ body {
 
 details {
     display: flex;
+
 }
 
 details > summary {
-    /* padding: 4px; */
-    width: 10px;
-    height: 100px;
-    /* background-color: #eeeeee;
-    border: none;
-    box-shadow: 1px 1px 2px #bbbbbb; */
+    width: 0em;
     cursor: pointer; 
 }
 
 details > div {
     height: 500px;
-    padding: 4px;
-    margin: 0;
-    box-shadow: 1px 1px 2px #bbbbbb;
+  
 }
 
 summary::marker {
@@ -43,37 +37,48 @@ summary::marker {
 
 summary {
     z-index:1;
-    list-style-position: outside;
-    margin-left: 30px;
-    padding: 10px 10px 10px 20px;
-    border-radius: 5px;
     border: solid green;
-    list-style-type: '+ ';
-    position: relative;
-    top: calc(1em + 100px);
-}
-
-details[open] > summary {
-    list-style-type: '- ';
+    /* list-style-type: '+ '; */
+    list-style-type: none;
     
 }
 
-.eintrag{
-    position: relative;
-    top: calc(-1.2em + 4px);
+details[open] > summary{
+    /* list-style-type: '- ';  */
+    list-style-type: none;
+    display: flex;
 }
 
+
 .nein-gestresst, .Nein-gestresst{
-    background-color: orangered;
+    border: solid orangered;
 }
 
 .ja-gestresst{
-    background-color: orange;
+    border: solid orange;
 }
 
 .neutral-gestresst{
-    background-color: blueviolet;
+    border: solid blueviolet;
 }
+
+.Beschreibung_Aufgabe{
+    display: none;
+}
+
+.aktivitaet{
+    display: none;
+}
+
+details:hover ~ .aktivitaet{
+    display: block;
+}
+
+ .eintrag:hover ~ .Beschreibung_Aufgabe{
+    display: block;
+} 
+
+
 
 /* .zeit {
     color: black;
