@@ -16,14 +16,23 @@ body {
     display: flex;
 } 
 
+.Schleifeninhalt{
+    display: grid;
+    grid-template-columns: repeat (2, 1fr);
+}
+
 details {
     display: flex;
-
+    flex-direction: row;
+    grid-area: x / 1 / x / x(row-start col-start row-end col-end)
 }
 
 details > summary {
     width: 0em;
     cursor: pointer; 
+    display: flex;
+    flex-direction: row;
+   
 }
 
 details > div {
