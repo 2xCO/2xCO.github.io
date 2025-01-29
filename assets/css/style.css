@@ -22,11 +22,13 @@ body {
     details{
         border: 1px solid grey;
         grid-row: 3 / 4;
+       
     }
 
         summary {
             width: 100px;
             height: 100px;
+            border: solid red;
             cursor: pointer; 
             /* list-style-type: '+ '; */
             list-style-type: none;
@@ -55,6 +57,12 @@ body {
 
 
 /* details open ///////////////// */
+details[open]{
+    grid-row: 1/2;
+
+
+}
+
 details[open] > summary{
     /* list-style-type: '- ';  */
     list-style-type: none;
