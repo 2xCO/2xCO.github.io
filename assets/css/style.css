@@ -58,11 +58,11 @@ body {
 details[open] > summary{
     /* list-style-type: '- ';  */
     list-style-type: none;
-    height: calc(0px - 100px);???????
+    
 }
 
-/* details[open]{
-} */
+
+
 
 
 /* gestresst Merkmale //////////// */
