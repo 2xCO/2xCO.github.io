@@ -8,6 +8,13 @@ body {
     display: flex;
 }
 
+.big {
+    font-size: 24px;
+    /* transform: scale(1.2); */
+    transition: width 0.3s ease-in-out;
+}
+
+
 .Zeitstrahl{
     width: 100vw;
     height: 100vh;
@@ -36,6 +43,7 @@ body {
             summary::marker {
             font-size: 2em;
         } 
+
 
         .eintrag{
             height: 30vh;
