@@ -101,7 +101,7 @@ details:hover ~ .Aktivitaet{
     visibility: visible;
 }
 
-details[open]:hover ~ .Beschreibung_Aktivitaet{
+li:hover ~ .Beschreibung_Aktivitaet{
     visibility: visible;
 } 
 
