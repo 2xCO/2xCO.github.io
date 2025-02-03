@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Wähle alle <li>-Elemente mit der Klasse "element" aus
-    const elements = document.querySelectorAll(".element");
+    const elements = document.querySelectorAll(".eintrag");
 
     // Das Element mit der ID "buttonContainer" wird in die Variable gespeichert
     const buttonContainer = document.getElementById("buttonContainer");
@@ -25,11 +25,18 @@ elements.forEach((element) => {
         element.style.width = newWidth;
         
         element.classList.add("big"); // Fügt die CSS-Klasse "big" zum Element hinzu
+        element.classList.remove("einklappen");
+
+
         buttonStatus = true; // Setzt den Status auf "true"
 
     } else { // Falls der Buttonstatus "true" ist (aktiv)
-        element.style.width = "50px"; // Setzt die Höhe zurück
+        element.style.width = "10px"; // Setzt die Höhe zurück
+
         element.classList.remove("big"); // Entfernt die CSS-Klasse "big"
+        element.classList.add("einklappen");
+
+
         buttonStatus = false; // Setzt den Status auf "false"
     }
   });

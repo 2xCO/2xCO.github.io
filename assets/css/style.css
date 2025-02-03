@@ -5,81 +5,34 @@ body {
 .Gesamtinhalt{
     width: 100vw;
     height: 100vh;
+    
+}
+#buttonContainer{
+    border-color: red;
+    border: 5px;
     display: flex;
+    width: 10vw !important;
+    flex-direction: column;
+    overflow-y: scroll;
+    position: relative !important;
+  
 }
 
-.big {
-    font-size: 24px;
-    /* transform: scale(1.2); */
-    transition: width 0.3s ease-in-out;
-}
-
-
-.Zeitstrahl{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-} 
-
-.Schleifeninhalt{
-    display: grid;
-    grid-template-rows: repeat (4, 25vh);
-}
-
-    details{
-        border: 1px solid grey;
-        grid-row: 3 / 4;
-       
-    }
-
-        summary {
-            width: 100px;
-            height: 100px;
-            border: solid red;
-            cursor: pointer; 
-            /* list-style-type: '+ '; */
-            list-style-type: none;
-        }
-            summary::marker {
-            font-size: 2em;
-        } 
-
-
-        .eintrag{
-            height: 30vh;
-           
-        } 
-
-
-    .Aktivitaet{
-        height: 200px;
-        visibility: hidden;
-        grid-row: 1 / 2 ;
-    }
-
-    .Beschreibung_Aktivitaet{
-        visibility: hidden;
-        grid-row: 2 / 3 ;
-        height: 100px;
-    }
-
-
-/* details open ///////////////// */
-details[open]{
-    grid-row: 1/2;
-
-
-}
-
-details[open] > summary{
-    /* list-style-type: '- ';  */
-    list-style-type: none;
+#buttonContainer button {
+    background-color: aqua;
     
 }
 
+ul{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow-x: scroll;
+} 
 
-
-
+.eintrag{
+    height: 30vh;   
+} 
 
 /* gestresst Merkmale //////////// */
 .nein-gestresst, .Nein-gestresst{
@@ -97,11 +50,40 @@ details[open] > summary{
 
 /* hover ///////////// */
 
-details:hover ~ .Aktivitaet{
-    visibility: visible;
+li:hover + li{
+    display: block;
+} 
+
+    /* nicht hover //////////// */
+    
+    .Beschreibung_Aktivitaet{
+        display: none;
+        height: 100px;
+        list-style-type: none;
+        pointer-events: none;
+    }
+
+
+/* JS class ///////////// */
+.big{
+    font-size: 24px;
+    /* transform: scale(1.2); */
+    transition: width 0.3s ease-in-out;
+    display: block;
 }
 
-li:hover ~ .Beschreibung_Aktivitaet{
-    visibility: visible;
-} 
+.einklappen{
+    transition: opacity 0.1s;
+    transition-delay: 0.3s;
+    display: none;
+}
+
+#buttonContainer{
+    position: fixed;
+    top:0;
+    left:0;
+    display: flex;
+    width: 100vw;
+    /* height: 50px; */
+}
 
