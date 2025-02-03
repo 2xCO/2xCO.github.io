@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Das Element mit der ID "buttonContainer" wird in die Variable gespeichert
     const buttonContainer = document.getElementById("buttonContainer");
+    
+   
 
 // Iteriert durch alle Elemente in der "elements"-Liste
 elements.forEach((element) => {
