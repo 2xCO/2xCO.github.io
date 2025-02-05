@@ -29,6 +29,11 @@ elements.forEach((element) => {
         element.classList.add("big"); // Fügt die CSS-Klasse "big" zum Element hinzu
         element.classList.remove("einklappen");
 
+        // Speichert nur den Text, aber nicht die <span>-Elemente
+        element.dataset.originalText = element.childNodes[0]?.nodeValue?.trim() || "";
+        if (element.dataset.originalText) {
+            element.childNodes[0].nodeValue = ""; // Entfernt nur den sichtbaren Text
+        }
 
         buttonStatus = true; // Setzt den Status auf "true"
 
@@ -38,6 +43,10 @@ elements.forEach((element) => {
         element.classList.remove("big"); // Entfernt die CSS-Klasse "big"
         element.classList.add("einklappen");
 
+        // Stellt nur den ursprünglichen Text wieder her, ohne die Spans zu beeinflussen
+        if (element.dataset.originalText) {
+            element.childNodes[0].nodeValue = element.dataset.originalText;
+        }
 
         buttonStatus = false; // Setzt den Status auf "false"
     }

@@ -52,12 +52,13 @@ ul{
     
 } 
 
-.strich{
-    width: 100vw;
-}
-
 hr{
-    border-top: 1px dashed red;
+    position: fixed;
+    width: 100vw;
+    left: 30%;
+    top: 500px;
+    z-index: -1;
+    border-top: 20px dashed rgb(0, 0, 0);
 }
 
 /* gestresst Merkmale //////////// */
