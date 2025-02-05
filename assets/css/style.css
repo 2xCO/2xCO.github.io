@@ -24,14 +24,36 @@ body {
     overflow-y: scroll;
     position: sticky;
     left: 0;
-
-  
+    top: 5vh;
+    font-family: "Antarctica";
+    height: 90vh;
 }
+    #buttonContainer::-webkit-scrollbar {
+        width: 20px;
+        background-color: aqua;
+
+    }
+    #buttonContainer::-webkit-scrollbar-thumb {
+        z-index: 1;
+        background-color: blue;
+        border-radius: 1px;
+        height: 1px;
+        
+      }
+
+    #buttonContainer::-webkit-scrollbar-track {
+        width: 1px;
+        background-color: #F5F5F5;
+    }
 
 #buttonContainer button {
     border: 0px;
-    margin: 1px;
-    
+    margin: 10px;
+    font-family: "Antarctica";
+    font-size: 1rem;
+    background-color: oldlace;
+    text-align: left;
+
 }
 
 ul{
@@ -66,16 +88,26 @@ hr{
 .nein-gestresst, .Nein-gestresst{
     background-color:orangered;
     border-right: solid oldlace;
+    font-variation-settings: "wdth" 1, "wght" 950;
+    font-size: 5rem;
+    color: rgb(89, 25, 2);
+    
 }
 
 .ja-gestresst{
-    background-color: orange;
+    background-color: blue;
     border-right: solid oldlace;
+    font-variation-settings: "wdth" 200, "wght" 950;
+    font-size: 5rem;
+    color: rgb(0, 0, 103);
 }
 
 .neutral-gestresst{
     background-color: blueviolet;
     border-right: solid oldlace;
+    font-variation-settings: "wdth" 100, "wght" 950;
+    font-size: 5rem;
+    color: rgb(49, 0, 95);
 }
 
 
@@ -111,6 +143,9 @@ hr{
 .tooltiptext{
     display: none;
     position: absolute;
+    bottom: 10%;
+    
+
 }
 
 li:hover .tooltiptext{
@@ -131,7 +166,6 @@ li:hover .aktivitaet{
 
 /* JS class ///////////// */
 .big{
-    font-size: 24px;
     /* transform: scale(1.2); */
     transition: width 0.3s ease-in-out;
     display: block;
