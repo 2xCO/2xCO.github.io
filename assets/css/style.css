@@ -20,44 +20,78 @@ body {
 .nav{
     position: fixed;
     display: flex;
-    top: 30px;
+    top: 3vh;
     margin-left: 30px;
+    
 }
 
 #buttonContainer{
     display: flex;
-    width: 300px;
+    width: 12vw;
     flex-direction: column;
     font-family: "Antarctica";
-    height: 80vh;
+    height: 85vh;
     overflow-y: scroll;
     overflow-x: hidden;
     
 }
+        #buttonContainer::-webkit-scrollbar {
+            visibility: hidden;
+        }
 
 
-#buttonContainer button {
+button {
     border: 0px;
-    margin: 5px;
-    font-family: "Antarctica";
-    font-size: 1rem;
+    margin: 3.5px;
     background-color: transparent;
     filter: blur(3px);
     color: oldlace;
+    font-family: "Antarctica";
+    font-size: 1rem;
+    font-variation-settings: "wdth" 100, "wght" 300 ;
     text-align: left;
-    width: 300px;
+   
 }
-        #buttonContainer::-webkit-scrollbar {
-            visibility: hidden;
+        button:hover{
+            font-variation-settings: "wdth" 70, "wght" 600, "ital" 12;
+        }
+        .durchgestrichen{
+            text-decoration: line-through 1px oldlace;
+            color: gray;
         }
 
 .moving-box {
     width: 150px;
     height: 150px;
     border-radius: 100%;
-    background: oldlace;
+    /* background: oldlace; */
+    border: 0.7px solid oldlace;
     position: relative;
     
+}
+
+    .Info{
+        display: none;
+        color: oldlace;
+        left: 20vw;
+        position: relative;
+    }
+
+    .moving-box:hover .Info{
+        display: block;
+    }
+
+    .moving-box:hover {
+        background-color: oldlace;
+    }
+
+.zeitachse{
+    width: 100vw;
+    height: 0.7px;
+    top: 90vh;
+    position: fixed;
+    background-color: oldlace;
+    pointer-events: none;
 }
 
 ul{
@@ -71,107 +105,63 @@ ul{
 } 
 
 .eintrag{
-    height: 30vh;   
+    height: 35vh;   
     right: 50vw;
+    border-right: 2.5px solid black;
+    border-left: 2.5px solid black;
     
 } 
-
-hr{
-    position: fixed;
-    width: 100vw;
-    left: 30%;
-    top: 500px;
-    z-index: -1;
-    border-top: 20px dashed rgb(0, 0, 0);
-}
 
 /* gestresst Merkmale //////////// */
 .nein-gestresst, .Nein-gestresst{
     background-color:orangered;
-    border-right: 2.5px solid black;
-    border-left: 2.5px solid black;
     font-variation-settings: "wdth" 1, "wght" 950;
-    font-size: 5rem;
-    color: rgb(89, 25, 2);
-    
 }
 
 .ja-gestresst{
     background-color: blue;
-    border-right: 2.5px solid black;
-    border-left: 2.5px solid black;
     font-variation-settings: "wdth" 200, "wght" 950;
-    font-size: 5rem;
-    color: rgb(0, 0, 103);
 }
 
 .neutral-gestresst{
     background-color: blueviolet;
-    border-right: 2.5px solid black;
-    border-left: 2.5px solid black;
     font-variation-settings: "wdth" 100, "wght" 950;
-    font-size: 5rem;
-    color: rgb(49, 0, 95);
 }
 
 
 /* hover ///////////// */
 #buttonContainer:hover button{
     filter: none;
-    
 }
-/* li:hover + li{
-    display: block;
-} 
-
-.eintrag:hover + div{
-    display: block;
-} */
-
-    /* nicht hover //////////// */
-    
-    /* .Beschreibung_Aktivitaet{
-        display: none;
-        height: 100px;
-        list-style-type: none;
-        pointer-events: none;
-        align-self: flex-start;
-       
-    }
-
-.Beschreibung{
-    display: none;
-    height: 100px;
-    list-style-type: none;
-    pointer-events: none;
-    align-self: flex-start;
-} */
 
 .tooltiptext{
-    display: none;
-    position: absolute;
-    bottom: 10%;
-    pointer-events: none;
-    
+    font-size: 2.5rem;
+    color: oldlace;
 }
+    .Ueberschrift{
+        display: none;
+        position: fixed;
+        top: 3vh;
+        left: 23vw;
+        pointer-events: none;
+        
+    }
+
+    .Beschreibung{
+        display: none;
+        position: relative;
+        bottom: 10%;
+        bottom: 50vh;
+        left: 5px;
+        width: 90vw;
+        pointer-events: none;
+    }
 
 li:hover .tooltiptext{
     display: block;
     
 }
 
-.aktivitaet{
-    display: none;
-    position: fixed;
-    top: 10%;
-    left: 30%;
-    pointer-events: none;
-}
-
-li:hover .aktivitaet{
-    display: block;
-   
-}
 /* hover button  //////////////*/
 
     

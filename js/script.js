@@ -50,12 +50,16 @@ elements.forEach((element) => {
 
         buttonStatus = false; // Setzt den Status auf "false"
     }
+
+    // Button-Text durchgestrichen machen oder zurücksetzen
+    buttonEl.classList.toggle("durchgestrichen");
   });
 
   // Fügt den Button dem "buttonContainer"-Element hinzu
   buttonContainer.appendChild(buttonEl);
     });
 });
+
 
 // Scrolll Animation
 
