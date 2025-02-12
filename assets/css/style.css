@@ -23,11 +23,12 @@ body {
     top: 3vh;
     margin-left: 30px;
     
+    
 }
 
 #buttonContainer{
     display: flex;
-    width: 12vw;
+    width: 30vw;
     flex-direction: column;
     font-family: "Antarctica";
     height: 85vh;
@@ -44,23 +45,26 @@ button {
     border: 0px;
     margin: 3.5px;
     background-color: transparent;
-    filter: blur(3px);
+    /* filter: blur(2px); */
     color: oldlace;
     font-family: "Antarctica";
     font-size: 1rem;
-    font-variation-settings: "wdth" 100, "wght" 300 ;
+    letter-spacing: 0.07rem;
+    font-variation-settings: "wdth" 100, "wght" 600 ;
     text-align: left;
    
 }
         button:hover{
-            font-variation-settings: "wdth" 70, "wght" 600, "ital" 12;
+            font-variation-settings: "wdth" 100, "wght" 600, "ital" 12;
         }
         .durchgestrichen{
             text-decoration: line-through 1px oldlace;
-            color: green;
+            font-variation-settings: "wdth" 100, "wght" 600, "ital" 12;
+            
         }
 
 .moving-box {
+    display: none;
     width: 150px;
     height: 150px;
     border-radius: 100%;
@@ -94,6 +98,14 @@ button {
     pointer-events: none;
 }
 
+.strich{
+    height: 100vh;
+    width: 0.7px;
+    background-color: oldlace;
+    pointer-events: none;
+
+}
+
 ul{
     margin: 0px;
     margin-block-start: 0px;
@@ -107,42 +119,41 @@ ul{
 .eintrag{
     height: 35vh;   
     right: 50vw;
-    border-right: 2.5px solid black;
-    border-left: 2.5px solid black;
+    border-right: 0.35px solid black;
+    border-left: 0.35px solid black;
     
 } 
 
 /* gestresst Merkmale //////////// */
 .nein-gestresst, .Nein-gestresst{
     background-color:orangered;
-    font-variation-settings: "wdth" 1, "wght" 950;
+    
 }
 
 .ja-gestresst{
     background-color: blue;
-    font-variation-settings: "wdth" 200, "wght" 950;
+    
 }
 
 .neutral-gestresst{
     background-color: blueviolet;
-    font-variation-settings: "wdth" 100, "wght" 950;
+    
 }
 
 
 /* hover ///////////// */
-#buttonContainer:hover button{
-    filter: none;
-}
 
 .tooltiptext{
-    font-size: 2.5rem;
+    font-size: 1rem;
+    font-variation-settings: "wdth" 100, "wght" 600;
+    letter-spacing: 0.07rem;
     color: oldlace;
 }
     .Ueberschrift{
         display: none;
         position: fixed;
         top: 3vh;
-        left: 23vw;
+        left: 25vw;
         pointer-events: none;
         
     }
