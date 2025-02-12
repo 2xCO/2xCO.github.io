@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: white;
     height: 100vh;
     overflow-y: hidden;
     overflow-x: scroll;
@@ -7,6 +7,9 @@ body {
     display: flex;
     font-family: "Antarctica";
 
+}
+.rand{
+    width: 20vw;
 }
 
 .Gesamtinhalt{
@@ -46,7 +49,7 @@ button {
     margin: 3.5px;
     background-color: transparent;
     /* filter: blur(2px); */
-    color: oldlace;
+    color: black;
     font-family: "Antarctica";
     font-size: 1rem;
     letter-spacing: 0.07rem;
@@ -58,7 +61,7 @@ button {
             font-variation-settings: "wdth" 100, "wght" 600, "ital" 12;
         }
         .durchgestrichen{
-            text-decoration: line-through 1px oldlace;
+            text-decoration: line-through 1px black;
             font-variation-settings: "wdth" 100, "wght" 600, "ital" 12;
             
         }
@@ -68,15 +71,15 @@ button {
     width: 150px;
     height: 150px;
     border-radius: 100%;
-    /* background: oldlace; */
-    border: 0.7px solid oldlace;
+    /* background: black; */
+    border: 0.7px solid black;
     position: relative;
     
 }
 
     .Info{
         display: none;
-        color: oldlace;
+        color: black;
         left: 20vw;
         position: relative;
     }
@@ -86,7 +89,7 @@ button {
     }
 
     .moving-box:hover {
-        background-color: oldlace;
+        background-color: black;
     }
 
 .zeitachse{
@@ -94,14 +97,14 @@ button {
     height: 0.7px;
     top: 90vh;
     position: fixed;
-    background-color: oldlace;
+    background-color: white;
     pointer-events: none;
 }
 
 .strich{
     height: 100vh;
     width: 0.7px;
-    background-color: oldlace;
+    background-color: black;
     pointer-events: none;
 
 }
@@ -119,8 +122,8 @@ ul{
 .eintrag{
     height: 35vh;   
     right: 50vw;
-    border-right: 0.35px solid black;
-    border-left: 0.35px solid black;
+    border-right: 0.35px solid white;
+    border-left: 0.35px solid white;
     
 } 
 
@@ -147,7 +150,7 @@ ul{
     font-size: 1rem;
     font-variation-settings: "wdth" 100, "wght" 600;
     letter-spacing: 0.07rem;
-    color: oldlace;
+    color: black;
 }
     .Ueberschrift{
         display: none;
@@ -201,7 +204,7 @@ li:hover .tooltiptext{
 }
 
 #buttonContainer::-webkit-scrollbar-thumb {
-        background: radial-gradient(circle, oldlace 40%, transparent 40%); Blauer Punkt */
+        background: radial-gradient(circle, black 40%, transparent 40%); Blauer Punkt */
         /* background-size: 200px 280px; Abstand zwischen den Punkten */
         /* background-repeat: repeat-y; Vertikale Wiederholung */
         /* z-index: -1;
