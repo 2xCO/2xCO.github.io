@@ -1,42 +1,45 @@
 body {
     background-color: white;
     height: 100vh;
+    width: 100vw;
     overflow-y: hidden;
     overflow-x: scroll;
     margin: 0px;
-    display: flex;
+    display: grid;
+    grid-template-rows: 3vh 3vh 6vh 23vh 30vh 23vh 6vh 3vh 3vh;
+	grid-template-columns: 3vh auto;
     font-family: "Antarctica";
 
 }
 .rand{
     width: 20vw;
+    height: 100vh;
 }
 
-.Gesamtinhalt{
+/* .Gesamtinhalt{
     top: 0px;
     left: 0;
     height: 100vh;
     display: flex;
 
-}
-    
-.nav{
-    position: fixed;
-    display: flex;
-    top: 3vh;
-    margin-left: 30px;
-    
-    
-}
+} */
 
 #buttonContainer{
+    grid-row:  3 / 7;
+	grid-column: 2 / 3;
+
+    position: fixed;
+    top: 6vh;
+    margin-left: 3vh; 
+    
     display: flex;
     width: 30vw;
     flex-direction: column;
     font-family: "Antarctica";
-    height: 85vh;
+    height: 82vh;
     overflow-y: scroll;
     overflow-x: hidden;
+    z-index: 1;
     
 }
         #buttonContainer::-webkit-scrollbar {
@@ -46,7 +49,8 @@ body {
 
 button {
     border: 0px;
-    margin: 3.5px;
+    margin-bottom: 7px;
+    padding: 0;
     background-color: transparent;
     /* filter: blur(2px); */
     color: black;
@@ -66,50 +70,53 @@ button {
             
         }
 
-.moving-box {
-    display: none;
+/* .moving-box {
+   
     width: 150px;
     height: 150px;
     border-radius: 100%;
-    /* background: black; */
+   
     border: 0.7px solid black;
     position: relative;
     
-}
+} */
 
-    .Info{
+    /* .Info{
         display: none;
         color: black;
         left: 20vw;
         position: relative;
-    }
+    } */
 
-    .moving-box:hover .Info{
+    /* .moving-box:hover .Info{
         display: block;
     }
 
     .moving-box:hover {
         background-color: black;
-    }
+    } */
 
 .zeitachse{
     width: 100vw;
     height: 0.7px;
-    top: 90vh;
+    bottom: 3vh;
     position: fixed;
     background-color: white;
     pointer-events: none;
 }
 
-.strich{
+/* .strich{
     height: 100vh;
     width: 0.7px;
     background-color: black;
     pointer-events: none;
 
-}
+} */
 
 ul{
+    grid-row:  6 / 10;
+	grid-column: 1 / span 2;
+
     margin: 0px;
     margin-block-start: 0px;
     margin-block-end: 0px;
@@ -119,13 +126,14 @@ ul{
     
 } 
 
-.eintrag{
-    height: 35vh;   
-    right: 50vw;
-    border-right: 0.35px solid white;
-    border-left: 0.35px solid white;
-    
-} 
+    .eintrag{
+        height: 35vh;   
+        right: 50vw;
+        border-right: 0.35px solid white;
+        border-left: 0.35px solid white;
+        
+    } 
+
 
 /* gestresst Merkmale //////////// */
 .nein-gestresst, .Nein-gestresst{
@@ -155,8 +163,8 @@ ul{
     .Ueberschrift{
         display: none;
         position: fixed;
-        top: 3vh;
-        left: 25vw;
+        top: 6vh;
+        left: 33vw;
         pointer-events: none;
         
     }
@@ -164,8 +172,7 @@ ul{
     .Beschreibung{
         display: none;
         position: relative;
-        bottom: 10%;
-        bottom: 50vh;
+        bottom: 53vh;
         left: 5px;
         width: 90vw;
         pointer-events: none;
@@ -173,6 +180,23 @@ ul{
 
 li:hover .tooltiptext{
     display: block;
+    
+}
+
+
+.masse{
+    font-size: 0.7rem;
+    font-variation-settings: "wdth" 100, "wght" 600;
+    letter-spacing: 0.07rem;
+    color: black;
+    text-align: right;
+    height: 50px;
+    border-right: solid black;
+    background-color: white;
+    position: relative;
+    float: right;
+    
+    bottom: 62vh;
     
 }
 
