@@ -15,7 +15,7 @@ elements.forEach((element) => {
   let buttonEl = document.createElement("button");
   
   // Setzt den Inhalt des Buttons auf den Inhalt des entsprechenden Elements
-  buttonEl.innerHTML = element.innerHTML;
+  buttonEl.innerHTML = element.childNodes[0]?.nodeValue?.trim() || "";
 
   // Fügt einen Event-Listener für den Klick auf den Button hinzu
   buttonEl.addEventListener("click", function () {
@@ -50,9 +50,28 @@ elements.forEach((element) => {
 
         buttonStatus = false; // Setzt den Status auf "false"
     }
+
+    // Button-Text durchgestrichen machen oder zurücksetzen
+    buttonEl.classList.toggle("durchgestrichen");
   });
 
   // Fügt den Button dem "buttonContainer"-Element hinzu
   buttonContainer.appendChild(buttonEl);
     });
 });
+
+
+// Scrolll Animation
+
+const scrollContainer = document.getElementById("buttonContainer");
+const movingBox = document.querySelector(".moving-box");
+
+scrollContainer.addEventListener("scroll", () => {
+  const maxScroll = scrollContainer.scrollHeight - scrollContainer.clientHeight;
+  const scrollProgress = scrollContainer.scrollTop / maxScroll; // Wert zwischen 0 und 1
+
+  // Box vertikal innerhalb der scroll-box bewegen
+  const maxMove = scrollContainer.clientHeight - movingBox.clientHeight; 
+  movingBox.style.top = `${scrollProgress * maxMove}px`;
+});
+

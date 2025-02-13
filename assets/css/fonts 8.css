@@ -1,4 +1,12 @@
 @font-face {
     font-family: 'Antarctica';
-    src: local url(/assets/css/Antarctica\ Trial/AntarcticaTrialOTF) format(otf);
+    src: url("/assets/css/fonts/Antarctica Trial VAR/Antarctica Trial VAR OTF/Antarctica Trial VAR-VF.otf");
+}
+
+
+.oswald-schrift {
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    
 }
