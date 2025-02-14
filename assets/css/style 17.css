@@ -1,0 +1,319 @@
+body {
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    margin: 0px;
+    display: grid;
+    grid-template-rows: 3vh 3vh 6vh 23vh 30vh 23vh 6vh 3vh 3vh;
+	grid-template-columns: 3vh auto;
+    font-family: "Antarctica";
+
+}
+.rand{
+    width: 20vw;
+    height: 100vh;
+}
+
+/* .Gesamtinhalt{
+    top: 0px;
+    left: 0;
+    height: 100vh;
+    display: flex;
+
+} */
+
+#buttonContainer{
+    grid-row:  3 / 7;
+	grid-column: 2 / 3;
+
+    position: fixed;
+    top: 6vh;
+    margin-left: 3vh; 
+    
+    display: flex;
+    width: 30vw;
+    flex-direction: column;
+    font-family: "Antarctica";
+    height: 82vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 1;
+    
+    
+}
+        #buttonContainer::-webkit-scrollbar {
+            visibility: hidden;
+        }
+
+
+button {
+    visibility: visible;
+    border: 0px;
+    margin-bottom: 7px;
+    padding: 0;
+    background-color: transparent;
+    /* filter: blur(2px); */
+    color: black;
+    font-family: "Antarctica";
+    font-size: 1rem;
+    letter-spacing: 0.07rem;
+    font-variation-settings: "wdth" 100, "wght" 600 ;
+    text-align: left;
+   
+}
+        button:hover{
+            font-variation-settings: "wdth" 100, "wght" 600, "ital" 12;
+        }
+        .durchgestrichen{
+            text-decoration: line-through 1px black;
+            font-variation-settings: "wdth" 100, "wght" 600, "ital" 12;
+            
+        }
+
+/* .moving-box {
+   
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+   
+    border: 0.7px solid black;
+    position: relative;
+    
+} */
+
+    /* .Info{
+        display: none;
+        color: black;
+        left: 20vw;
+        position: relative;
+    } */
+
+    /* .moving-box:hover .Info{
+        display: block;
+    }
+
+    .moving-box:hover {
+        background-color: black;
+    } */
+
+.zeitachse{
+    width: 100vw;
+    height: 0.7px;
+    bottom: 3vh;
+    position: fixed;
+    background-color: white;
+    pointer-events: none;
+}
+
+/* .strich{
+    height: 100vh;
+    width: 0.7px;
+    background-color: black;
+    pointer-events: none;
+
+} */
+
+ul{
+    grid-row:  6 / 10;
+	grid-column: 1 / span 2;
+
+    margin: 0px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    padding-inline-start: 0px;
+    display: flex;
+    align-items: flex-end;
+    
+} 
+
+    .eintrag{
+        height: 35vh;   
+        right: 50vw;
+        border-right: 0.35px solid white;
+        border-left: 0.35px solid white;
+        
+    } 
+
+
+/* gestresst Merkmale //////////// */
+.nein-gestresst, .Nein-gestresst{
+    background-color:orangered;
+    
+}
+
+.ja-gestresst{
+    background-color: blue;
+    
+}
+
+.neutral-gestresst{
+    background-color: blueviolet;
+    
+}
+
+
+/* hover ///////////// */
+
+.tooltiptext{
+    font-size: 1rem;
+    font-variation-settings: "wdth" 100, "wght" 600;
+    letter-spacing: 0.07rem;
+    color: black;
+}
+    .Ueberschrift{
+        opacity: 0;
+        position: fixed;
+        top: 6vh;
+        left: 33vw;
+        pointer-events: none;
+        
+    }
+
+    .Beschreibung{
+        border-left: 0.7px solid black;
+        background-color: white;
+        position: relative;
+        bottom: 83vh;
+        height: 33vh;
+        opacity: 0;
+        
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: baseline;
+
+        
+        pointer-events: none;
+    }
+    .Beschreibung p{
+        margin-left: 5vw;
+    }
+
+li:hover .tooltiptext{
+    opacity: 100%;
+    z-index: 2;
+    color: black;
+    background-color: white;
+    width: 40vw;
+    
+}
+
+li:hover :first-child{
+    z-index: 2;
+    bottom: 60vh;
+    width: 40vw;
+
+    
+}
+
+ul:hover #buttonContainer button{  
+    visibility: hidden;
+    
+}
+
+.masse{
+    /* visibility: hidden; */
+    border-left: 0.7px solid black;
+    background-color: white;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    pointer-events: none;
+
+    overflow-x:visible;
+
+    
+    bottom: 65vh;
+    
+}
+.masse p{
+    font-family: "Oswald";
+    font-size: 1rem;
+    margin: 0;
+    margin-top: 3vh;
+    letter-spacing: 0.07rem;
+    color: black;
+    background-color: white;
+    
+    
+}
+
+li:hover{
+    z-index: 2;
+}
+
+/* hover button  //////////////*/
+
+    
+
+/* JS class ///////////// */
+.big{
+    /* transform: scale(1.2); */
+    transition: width 0.3s ease-in-out;
+    display: block;
+}
+
+.einklappen{
+    transition: opacity 0.1s;
+    transition-delay: 0.3s;
+    display: none;
+}
+
+
+/* Scrollbars //////////////*/
+
+/* #buttonContainer::-webkit-scrollbar {
+    width: 200px; /* Schmale Scrollbar */
+    /* background-color: transparent; Unsichtbarer Hintergrund */ 
+    /* z-index: -1;
+    visibility: hidden;
+}
+
+#buttonContainer::-webkit-scrollbar-thumb {
+        background: radial-gradient(circle, black 40%, transparent 40%); Blauer Punkt */
+        /* background-size: 200px 280px; Abstand zwischen den Punkten */
+        /* background-repeat: repeat-y; Vertikale Wiederholung */
+        /* z-index: -1;
+        background-color: transparent;
+    }
+
+    #buttonContainer::-webkit-scrollbar-track{
+            background-color: transparent;
+            visibility: hidden;
+            z-index: -1;
+        }
+
+        #buttonContainer::-webkit-scrollbar-corner{
+            visibility: hidden;
+        } */
+        /*///////////////
+
+        /* body::-webkit-scrollbar {
+            height: 10px; 
+            z-index: -1; 
+            position: fixed;
+            border-radius: 100px;
+            
+        }
+                
+            body::-webkit-scrollbar-thumb {
+                background: radial-gradient(circle, blue 40%, transparent 40%); 
+                background-size: 200px 280px; 
+                background-color: orange;
+                background-repeat: repeat-y; 
+                
+            }
+                
+                    body::-webkit-scrollbar-track{
+                            background-color: transparent;
+                            display:none;
+                            z-index: -1;
+                        }
+                
+                    body::-webkit-scrollbar-corner{
+                            visibility: hidden;
+                        } */

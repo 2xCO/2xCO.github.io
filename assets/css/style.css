@@ -29,7 +29,7 @@ body {
 	grid-column: 2 / 3;
 
     position: fixed;
-    top: 6vh;
+    top: 3vh;
     margin-left: 3vh; 
     
     display: flex;
@@ -176,8 +176,10 @@ ul{
         background-color: white;
         position: relative;
         bottom: 83vh;
-        height: 30vh;
+        height: 33vh;
+        width: 80vw;
         opacity: 0;
+        
 
         display: flex;
         justify-content: flex-start;
@@ -186,20 +188,24 @@ ul{
         
         pointer-events: none;
     }
+    .Beschreibung p{
+        margin-left: 1vw;
+    }
 
 li:hover .tooltiptext{
     opacity: 100%;
     z-index: 2;
     color: black;
     background-color: white;
-    width: 40vw;
+    
     
 }
 
 li:hover :first-child{
     z-index: 2;
-    bottom: 60vh;
-    width: 40vw;
+    bottom: 59vh;
+    width: 80vw;
+    visibility: visible;
 
     
 }
@@ -223,21 +229,28 @@ ul:hover #buttonContainer button{
     overflow-x:visible;
 
     
-    bottom: 65vh;
+    bottom: 70vh;
     
 }
-.masse p{
+.zeit{
     font-family: "Oswald";
     font-size: 1rem;
     margin: 0;
-    margin-top: 3vh;
+    margin-top: 4vh;
     letter-spacing: 0.07rem;
     color: black;
     background-color: white;
-    
+    margin-left: 1vw;
     
 }
-
+.einheit{
+    visibility: hidden;
+    font-family: "Antarctica";
+    letter-spacing: 0.07rem;
+    font-variation-settings: "wdth" 100, "wght" 600 ;
+    font-size: 1rem;
+    color: black;
+}
 li:hover{
     z-index: 2;
 }
