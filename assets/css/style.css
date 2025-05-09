@@ -16,6 +16,16 @@ body {
     height: 100vh;
     order: 100;
 }
+.inforaper{
+    margin-left: 3vh;
+    margin-bottom: 3vh;
+}
+.info{
+    font-family: "Antarctica";
+    font-variation-settings: "wdth" 100, "wght" 600;
+    
+
+}
 
 #buttonContainer{
     grid-row:  3 / 7;
@@ -29,7 +39,7 @@ body {
     width: 30vw;
     flex-direction: column;
     font-family: "Antarctica";
-    height: 82vh;
+    height: 58vh;
     overflow-y: scroll;
     overflow-x: hidden;
     z-index: 1;
@@ -58,6 +68,7 @@ button {
 }
         button:hover{
             font-variation-settings: "wdth" 100, "wght" 600, "ital" 12;
+            cursor: pointer;
         }
         .durchgestrichen{
             text-decoration: line-through 1px black;
@@ -159,7 +170,7 @@ ul{
     }
 
     .masse{
-        visibility: hidden;
+        visibility: visible;
         border-left: 0.7px solid black;
         /* background-color: white; */
         height: 59vh;
@@ -208,12 +219,14 @@ li:hover :first-child{
     width: 80vw;
     visibility: visible; 
     transition: 0.7s;
+    cursor: pointer;
     
 }
 
 li:hover .Ueberschrift{
     /* top: 6vh;  */
     opacity: 100%;
+    
 }
 
 li:hover .Beschreibung{
